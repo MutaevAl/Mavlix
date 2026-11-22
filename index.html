@@ -16,8 +16,10 @@
       --muted: #858585;
       --silver: #c9c9c9;
     }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -26,8 +28,18 @@
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
     }
-    .shell { width: 100%; max-width: 520px; margin: 0 auto; }
-    .hero { text-align: center; padding: 72px 0 38px; }
+
+    .shell {
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 72px 0 38px;
+    }
+
     .brand {
       margin: 0;
       font-size: clamp(42px, 11vw, 58px);
@@ -35,6 +47,7 @@
       letter-spacing: .19em;
       padding-left: .19em;
     }
+
     .tagline {
       margin: 19px 0 0;
       color: #777;
@@ -42,12 +55,18 @@
       letter-spacing: .42em;
       padding-left: .42em;
     }
+
     .rule {
       height: 1px;
       margin: 0 0 27px;
       background: linear-gradient(90deg, transparent, #555, transparent);
     }
-    .menu { display: grid; gap: 13px; }
+
+    .menu {
+      display: grid;
+      gap: 13px;
+    }
+
     .menu-card {
       display: flex;
       align-items: center;
@@ -64,98 +83,253 @@
       transition: background .2s ease, border-color .2s ease, transform .2s ease;
       -webkit-tap-highlight-color: transparent;
     }
-    .menu-card:active { background: #242424; border-color: #888; transform: scale(.99); }
-    .number { min-width: 64px; color: #858585; font-size: 23px; font-weight: 300; }
-    .info { flex: 1; min-width: 0; }
-    .name { display: block; font-size: 18px; line-height: 1.35; letter-spacing: 2.2px; font-weight: 400; }
-    .description { display: block; margin-top: 7px; color: var(--muted); font-size: 14px; line-height: 1.35; }
-    .arrow { margin-left: 10px; color: #aaa; font-size: 29px; font-weight: 200; }
-    .footer { margin: 62px 0 12px; text-align: center; color: #555; font-size: 11px; letter-spacing: .38em; }
 
-    .page { display: none; animation: appear .28s ease both; padding: 3px 1px 25px; }
-    .page.active { display: block; }
+    .menu-card:active {
+      background: #242424;
+      border-color: #888;
+      transform: scale(.99);
+    }
+
+    .number {
+      min-width: 64px;
+      color: #858585;
+      font-size: 23px;
+      font-weight: 300;
+    }
+
+    .info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .name {
+      display: block;
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing: 2.2px;
+      font-weight: 400;
+    }
+
+    .description {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .arrow {
+      margin-left: 10px;
+      color: #aaa;
+      font-size: 29px;
+      font-weight: 200;
+    }
+
+    .footer {
+      margin: 62px 0 12px;
+      text-align: center;
+      color: #555;
+      font-size: 11px;
+      letter-spacing: .38em;
+    }
+
+    .page {
+      display: none;
+      animation: appear .28s ease both;
+      padding: 3px 1px 25px;
+    }
+
+    .page.active {
+      display: block;
+    }
+
     .back {
-      display: inline-block; margin: 0 0 24px; padding: 10px 0;
-      border: 0; background: transparent; color: #999; cursor: pointer;
-      font-size: 12px; letter-spacing: 2px;
+      display: inline-block;
+      margin: 0 0 24px;
+      padding: 10px 0;
+      border: 0;
+      background: transparent;
+      color: #999;
+      cursor: pointer;
+      font-size: 12px;
+      letter-spacing: 2px;
     }
-    h2 { margin: 0 0 19px; font-size: 22px; font-weight: 400; letter-spacing: 3px; }
-    .content { color: #c0c0c0; font-size: 14px; line-height: 1.65; white-space: pre-line; }
-    .content strong { color: #f2f2f2; font-weight: 600; }
-    .content p { margin: 0 0 10px; }
+
+    h2 {
+      margin: 0 0 19px;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 3px;
+    }
+
+    .content {
+      color: #c0c0c0;
+      font-size: 14px;
+      line-height: 1.65;
+      white-space: pre-line;
+    }
+
+    .content strong {
+      color: #f2f2f2;
+      font-weight: 600;
+    }
+
+    .content p {
+      margin: 0 0 10px;
+    }
+
     .link {
-      display: block; margin-top: 10px; padding: 15px 17px;
-      border: 1px solid #393939; border-radius: 13px;
+      display: block;
+      margin-top: 10px;
+      padding: 15px 17px;
+      border: 1px solid #393939;
+      border-radius: 13px;
       background: linear-gradient(135deg, #191919, #101010);
-      color: #e5e5e5; text-decoration: none; font-size: 12px;
-      letter-spacing: 1.5px; transition: background .2s ease;
+      color: #e5e5e5;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      transition: background .2s ease;
     }
-    .link:active { background: #252525; }
-    .section-label { margin: 19px 0 5px; color: #aaa; font-size: 13px; }
+
+    .link:active {
+      background: #252525;
+    }
+
+    .section-label {
+      margin: 19px 0 5px;
+      color: #aaa;
+      font-size: 13px;
+    }
+
     @keyframes appear {
-      from { opacity: 0; transform: translateY(7px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(7px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     @media (max-width: 380px) {
-      body { padding-right: 15px; padding-left: 15px; }
-      .hero { padding-top: 62px; }
-      .menu-card { min-height: 101px; padding: 15px; border-radius: 20px; }
-      .number { min-width: 55px; font-size: 21px; }
-      .name { font-size: 15px; letter-spacing: 1.7px; }
-      .description { font-size: 13px; }
+      body {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      .hero {
+        padding-top: 62px;
+      }
+
+      .menu-card {
+        min-height: 101px;
+        padding: 15px;
+        border-radius: 20px;
+      }
+
+      .number {
+        min-width: 55px;
+        font-size: 21px;
+      }
+
+      .name {
+        font-size: 15px;
+        letter-spacing: 1.7px;
+      }
+
+      .description {
+        font-size: 13px;
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+      }
     }
   </style>
 </head>
+
 <body>
   <main class="shell">
+
     <section id="home">
       <header class="hero">
         <h1 class="brand">MAVLIX</h1>
         <p class="tagline">OFFICIAL COMMUNITY</p>
       </header>
+
       <div class="rule"></div>
 
       <nav class="menu" aria-label="Главное меню">
+
         <button class="menu-card" type="button" onclick="openPage('rules')">
           <span class="number">01</span>
-          <span class="info"><span class="name">ПРАВИЛА</span><span class="description">Правила сообщества</span></span>
+          <span class="info">
+            <span class="name">ПРАВИЛА</span>
+            <span class="description">Правила сообщества</span>
+          </span>
           <span class="arrow">›</span>
         </button>
+
         <button class="menu-card" type="button" onclick="openPage('cleaning')">
           <span class="number">02</span>
-          <span class="info"><span class="name">ЧИСТКА</span><span class="description">Нормы и ресты</span></span>
+          <span class="info">
+            <span class="name">ЧИСТКА</span>
+            <span class="description">Нормы и ресты</span>
+          </span>
           <span class="arrow">›</span>
         </button>
+
         <button class="menu-card" type="button" onclick="openPage('admins')">
           <span class="number">03</span>
-          <span class="info"><span class="name">АДМИНИСТРАЦИЯ</span><span class="description">Состав администрации</span></span>
+          <span class="info">
+            <span class="name">АДМИНИСТРАЦИЯ</span>
+            <span class="description">Состав администрации</span>
+          </span>
           <span class="arrow">›</span>
         </button>
+
         <button class="menu-card" type="button" onclick="openPage('join')">
           <span class="number">04</span>
-          <span class="info"><span class="name">КАК ПОПАСТЬ В ЧАТ</span><span class="description">Вступление в Mavlix</span></span>
+          <span class="info">
+            <span class="name">КАК ПОПАСТЬ В ЧАТ</span>
+            <span class="description">Вступление в Mavlix</span>
+          </span>
           <span class="arrow">›</span>
         </button>
+
         <a class="menu-card" href="https://www.tiktok.com/@mavlixsv" target="_blank" rel="noopener noreferrer">
           <span class="number">05</span>
-          <span class="info"><span class="name">TIKTOK</span><span class="description">Аккаунт сообщества</span></span>
+          <span class="info">
+            <span class="name">TIKTOK</span>
+            <span class="description">Аккаунт сообщества</span>
+          </span>
           <span class="arrow">›</span>
         </a>
+
         <a class="menu-card" href="https://t.me/poslaniya?start=ooCcJhA0" target="_blank" rel="noopener noreferrer">
           <span class="number">06</span>
-          <span class="info"><span class="name">АНОНИМНЫЕ СООБЩЕНИЯ</span><span class="description">Связь с сообществом</span></span>
+          <span class="info">
+            <span class="name">АНОНИМНЫЕ СООБЩЕНИЯ</span>
+            <span class="description">Связь с сообществом</span>
+          </span>
           <span class="arrow">›</span>
         </a>
+
       </nav>
+
       <footer class="footer">MAVLIX • 2026</footer>
     </section>
 
     <section id="rules" class="page">
       <button class="back" type="button" onclick="home()">← НАЗАД</button>
       <h2>ПРАВИЛА</h2>
+
       <div class="content">1. Уважайте участников и администрацию.
 2. Оскорбления, травля и провокации запрещены.
 3. Политика, религия и национальные конфликты не обсуждаются.
@@ -172,6 +346,7 @@
     <section id="cleaning" class="page">
       <button class="back" type="button" onclick="home()">← НАЗАД</button>
       <h2>ЧИСТКА</h2>
+
       <div class="content">В первую очередь — <strong>норма 40/280.</strong>
 
 Чистка проводится каждое воскресенье в <strong>19:00 по МСК.</strong>
@@ -188,6 +363,7 @@
     <section id="admins" class="page">
       <button class="back" type="button" onclick="home()">← НАЗАД</button>
       <h2>АДМИНИСТРАЦИЯ</h2>
+
       <div class="content">Владелец проекта:</div>
       <a class="link" href="https://t.me/vezsxm" target="_blank" rel="noopener noreferrer">@vezsxm</a>
 
@@ -202,34 +378,57 @@
     <section id="join" class="page">
       <button class="back" type="button" onclick="home()">← НАЗАД</button>
       <h2>КАК ПОПАСТЬ В ЧАТ</h2>
+
       <div class="content">Чтобы стать частью MAVLIX, выполни несколько шагов:
 
 01. Подпишись на наш канал.</div>
+
       <a class="link" href="https://t.me/+KULAQRUM3EIyYzQy" target="_blank" rel="noopener noreferrer">ПЕРЕЙТИ В КАНАЛ</a>
 
       <div class="content" style="margin-top:17px;">02. Ознакомься с правилами проекта.
 03. Заполни анкету.</div>
+
       <a class="link" href="https://t.me/MavlixsV" target="_blank" rel="noopener noreferrer">КАНАЛ С АНКЕТАМИ</a>
 
       <div class="content" style="margin-top:17px;">04. Отправь заполненную анкету администратору.
 05. Подай заявку на вступление в чат.</div>
+
       <a class="link" href="https://t.me/+gwOc3zCSSXMwMzky" target="_blank" rel="noopener noreferrer">ПЕРЕЙТИ В ЧАТ</a>
     </section>
+
   </main>
 
   <script>
     function openPage(id) {
       document.getElementById('home').style.display = 'none';
-      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+
+      document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+      });
+
       const selected = document.getElementById(id);
-      if (selected) selected.classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      if (selected) {
+        selected.classList.add('active');
+      }
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
 
     function home() {
-      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+      document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+      });
+
       document.getElementById('home').style.display = 'block';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
   </script>
 </body>
